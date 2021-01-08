@@ -1,0 +1,22 @@
+{
+  "name": "qiankun_demo_vue",
+  "version": "1.0.0",
+  "description": "以vue为技术栈实现一个简单的微前端demo",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:main-app": "cd main-app && npm install",
+    "install:child-vue": "cd child-vue && npm install",
+    "install:child-vue-create": "cd child-vue-create && npm install",
+    "start": "npm-run-all --parallel start:*",
+    "start:main-app": "cd main-app && npm run serve",
+    "start:child-vue": "cd child-vue && npm run serve",
+    "start:child-vue-create": "cd child-vue-create && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
