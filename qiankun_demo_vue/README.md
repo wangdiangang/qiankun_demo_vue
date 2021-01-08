@@ -8,7 +8,8 @@
     4：调用bootstrap mount  unmount函数
     5：基座main.js 添加入口
 ## npm-run-all
-    ```
+    ``` JavaScript
+    package.json
     安装npm-run-all
     "install": "npm-run-all --serial install:*",
     、。"install:child-vue": "cd child-vue && npm install",
