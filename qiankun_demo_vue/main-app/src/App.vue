@@ -29,6 +29,7 @@
       </aside>
       <main id="vue"></main>
     </div>
+    <footer>底部</footer>
   </div>
 </template>
 
@@ -58,7 +59,7 @@ export default {
 }
 aside {
   max-width: 200px;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 160px);
   border: 1px solid blue;
   overflow-y: scroll;
 }
@@ -69,7 +70,12 @@ aside {
 main {
   border: 1px solid yellow;
   width: calc(100vw);
-  height: calc(100vh - 80px);
+  height: calc(100vh - 180px);
   overflow-y: scroll;
+}
+footer{
+  width: 100%;
+  height: 80px;
+  border:1px solid red
 }
 </style>
