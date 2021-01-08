@@ -12,7 +12,7 @@
     package.json
     安装npm-run-all
     "install": "npm-run-all --serial install:*",
-    、。"install:child-vue": "cd child-vue && npm install",
+    "install:child-vue": "cd child-vue && npm install",
     "install:child-vue-create": "cd child-vue-create && npm install",
     "start": "npm-run-all --parallel start:*",
     "start:main-app": "cd main-app && npm run serve",
