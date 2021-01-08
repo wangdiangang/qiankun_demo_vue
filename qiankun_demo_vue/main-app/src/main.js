@@ -18,12 +18,12 @@ import { registerMicroApps, start } from 'qiankun';
 
 registerMicroApps([
   {
-    name: 'vue', // app name registered
-    entry: '//127.0.0.1:10000',
-    container: '#vue',
-    activeRule: '/vue',
+    name: 'vue', // 
+    entry: '//127.0.0.1:10000',//子应用
+    container: '#vue',//绑定的id
+    activeRule: '/vue',//匹配路由
     props: {
-      initState: store.state
+      initState: store.state//vuex参数传下去
     }
   },
   {

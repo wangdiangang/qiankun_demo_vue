@@ -7,7 +7,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/homes">Homes第二个</router-link> |
+      <router-link to="/">Homes第二个</router-link> |
       <router-link to="/about">About第二个</router-link>
       这是个新的新的自己创建的
       {{ $store.state.global.num }}
