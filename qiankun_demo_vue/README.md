@@ -8,11 +8,13 @@
     4：调用bootstrap mount  unmount函数
     5：基座main.js 添加入口
 ## npm-run-all
-    1.安装npm-run-all
-    2."install": "npm-run-all --serial install:*",
-    2、、。"install:child-vue": "cd child-vue && npm install",
-    2。"install:child-vue-create": "cd child-vue-create && npm install",
-    2."start": "npm-run-all --parallel start:*",
-    2."start:main-app": "cd main-app && npm run serve",
-    2."start:child-vue": "cd child-vue && npm run serve",
-    2."start:child-vue-create": "cd child-vue-create && npm run serve",
+    ```
+    安装npm-run-all
+    "install": "npm-run-all --serial install:*",
+    、。"install:child-vue": "cd child-vue && npm install",
+    "install:child-vue-create": "cd child-vue-create && npm install",
+    "start": "npm-run-all --parallel start:*",
+    "start:main-app": "cd main-app && npm run serve",
+    "start:child-vue": "cd child-vue && npm run serve",
+    "start:child-vue-create": "cd child-vue-create && npm run serve",
+    ```
