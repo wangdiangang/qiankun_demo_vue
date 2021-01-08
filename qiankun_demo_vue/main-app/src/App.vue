@@ -18,26 +18,17 @@
         <el-radio-button :label="true">收起</el-radio-button>
       </el-radio-group>
     </el-menu>
-    <aside>
-      
-      <el-menu :collapse="isCollapse">
-        <el-menu-item v-for="i in 60" :key="i"
-          >{{ i }}个啊{{ key }}</el-menu-item
-        >
-      </el-menu>
-    </aside>
-    <!-- <main>
-      <h1>
-        主应用的state.num：{{ $store.state.num }}========用户名是{{
-          $store.state.user
-        }}
-      </h1>
-      <button @click="changeUse">更改用户名</button>
-      <button @click="addNum(10)">主应用增加10</button>
-      <router-view></router-view>
-      <div id="vue"></div>
-    </main> -->
-    <main id="vue"></main>
+    <div style="display: flex">
+      <aside>
+        <el-menu :collapse="isCollapse">
+          <el-menu-item index="i" v-for="i in 60" :key="i">
+            <i class="el-icon-setting"></i>
+            <span slot="title">导航{{ i }}</span>
+          </el-menu-item>
+        </el-menu>
+      </aside>
+      <main id="vue"></main>
+    </div>
   </div>
 </template>
 
@@ -66,18 +57,18 @@ export default {
   padding: 10px;
 }
 aside {
-  display: inline-block;
-  position: absolute;
-  width: 200px;
+  max-width: 200px;
   height: calc(100vh - 60px);
   border: 1px solid blue;
   overflow-y: scroll;
 }
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
 main {
-  display: inline-block;
-  margin-left: 200px;
   border: 1px solid yellow;
-  width: calc(100vw - 198px);
+  width: calc(100vw);
   height: calc(100vh - 80px);
   overflow-y: scroll;
 }
