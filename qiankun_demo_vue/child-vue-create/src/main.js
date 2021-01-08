@@ -6,9 +6,11 @@ import store from './store'
 Vue.config.productionTip = false
 let instance
 function render(props = {}) {
+  console.log('======props====',props,props.initState);
   if (!store.hasModule('global')) {
     const initState = props.initState || {
-      num: 0
+      num: 0,
+      user:'--不在qiankun的默认--',
     }
     const globalModule = {
       namespaced: true,
@@ -16,6 +18,9 @@ function render(props = {}) {
       mutations: {
         addNum(state, n) {
           state.num += n
+        },
+        setLocal(state,o){
+          state.user=o
         }
       },
     };
