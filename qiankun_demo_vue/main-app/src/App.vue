@@ -20,7 +20,7 @@
     </el-radio-group>
     <div style="display: flex">
       <aside>
-        <el-menu :collapse="isCollapse">
+        <el-menu :collapse="isCollapse" @select="selectAside">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
@@ -39,7 +39,7 @@
               <el-menu-item index="1-4-1">选项1</el-menu-item>
             </el-submenu>
           </el-submenu>
-          <el-menu-item index="i" v-for="i in 60" :key="i">
+          <el-menu-item :index="i + ''" v-for="i in 60" :key="i">
             <i class="el-icon-setting"></i>
             <span slot="title">导航{{ i }}</span>
           </el-menu-item>
@@ -61,6 +61,12 @@ export default {
     select(key, keyPath) {
       console.log(key, keyPath);
       this.key = key.substr(1) || "home";
+    },
+    selectAside(key, keyPath) {
+      console.log(key, keyPath);
+      if (key == "1") {
+        this.$router.push('/vue-create/about')
+      }
     },
     changeUse() {
       this.$store.commit("setLocal", "五道杠");
